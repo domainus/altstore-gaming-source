@@ -1,0 +1,11 @@
+{
+  "name": "domainus Gaming Apps",
+  "subtitle": "Madeira and BCD Games, updated from GitHub Releases",
+  "description": "Unofficial AltStore Classic source tracking releases from the original developers. App downloads are directly from upstream GitHub.",
+  "website": "https://github.com/domainus/altstore-gaming-source",
+  "tintColor": "#365E98",
+  "apps": [],
+  "news": [],
+  "identifier": "io.github.domainus.altstore-gaming-source",
+  "sourceURL": "https://raw.githubusercontent.com/domainus/altstore-gaming-source/main/source.json"
+}
