@@ -75,5 +75,6 @@
   "featuredApps": [
     "com.willfaust.madeora",
     "com.thebcd69.bcd"
-  ]
+  ],
+  "iconURL": "https://raw.githubusercontent.com/willfaust/Madeira/main/app/Madeira/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png"
 }
