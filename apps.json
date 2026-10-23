@@ -1,0 +1,24 @@
+[
+  {
+    "repository": "willfaust/Madeira",
+    "name": "Madeira",
+    "bundleIdentifier": "com.willfaust.madeora",
+    "developerName": "willfaust",
+    "subtitle": "Run Windows PC games on iPhone",
+    "localizedDescription": "Madeira runs Windows PC games on compatible iPhones using FEX-Emu, Wine, and a Metal graphics translation layer. This is an unofficial listing that follows the developer's GitHub releases.",
+    "iconURL": "https://raw.githubusercontent.com/willfaust/Madeira/main/app/Madeira/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png",
+    "category": "games",
+    "tintColor": "#365E98"
+  },
+  {
+    "repository": "thebcd69/bcd-games",
+    "name": "BCD Games",
+    "bundleIdentifier": "com.thebcd69.bcd",
+    "developerName": "thebcd69",
+    "subtitle": "Play PC games on iOS — alpha builds",
+    "localizedDescription": "BCD is an experimental PC game compatibility app for iOS, in active alpha development. This is an unofficial listing that follows the developer's GitHub releases.",
+    "iconURL": "https://raw.githubusercontent.com/thebcd69/bcd-games/main/app/Madeira/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png",
+    "category": "games",
+    "tintColor": "#63369A"
+  }
+]
