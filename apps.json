@@ -20,5 +20,16 @@
     "iconURL": "https://raw.githubusercontent.com/thebcd69/bcd-games/main/app/Madeira/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png",
     "category": "games",
     "tintColor": "#63369A"
+  },
+  {
+    "repository": "Mak5er/AirCard-iOS",
+    "name": "AirCard-iOS",
+    "bundleIdentifier": "com.mak5er.aircard",
+    "developerName": "Mak5er",
+    "subtitle": "Customize Apple Wallet cards, passcode themes and wallpapers",
+    "localizedDescription": "AirCard-iOS customizes Apple Wallet card artwork, passcode themes and PosterBoard wallpapers. Supports importing pairing files on iOS 18–26 and on-device pairing on iOS 27+. Follow the official project instructions to use LocalDevVPN and appropriate pairing.",
+    "iconURL": "https://raw.githubusercontent.com/Mak5er/AirCard-iOS/main/ios-app/Assets.xcassets/AppIcon.appiconset/AppIcon.png",
+    "category": "utilities",
+    "tintColor": "#557ABD"
   }
 ]

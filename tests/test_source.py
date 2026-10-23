@@ -61,10 +61,10 @@ class TestUpdater(unittest.TestCase):
     def test_config_and_source(self):
         source = json.loads(s.SOURCE_FILE.read_text())
         apps = json.loads(s.CONFIG_FILE.read_text())
-        self.assertEqual(len(apps), 2)
+        self.assertEqual(len(apps), 3)
         self.assertEqual({a["bundleIdentifier"] for a in apps},
-                         {"com.willfaust.madeora", "com.thebcd69.bcd"})
-        self.assertIn(len(source["apps"]), (0, 2))
+                         {"com.willfaust.madeora", "com.thebcd69.bcd", "com.mak5er.aircard"})
+        self.assertIn(len(source["apps"]), (0, 2, 3))
 
 
 if __name__ == "__main__":
