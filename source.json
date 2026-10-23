@@ -4,8 +4,76 @@
   "description": "Unofficial AltStore Classic source tracking releases from the original developers. App downloads are directly from upstream GitHub.",
   "website": "https://github.com/domainus/altstore-gaming-source",
   "tintColor": "#365E98",
-  "apps": [],
+  "apps": [
+    {
+      "name": "Madeira",
+      "bundleIdentifier": "com.willfaust.madeora",
+      "developerName": "willfaust",
+      "subtitle": "Run Windows PC games on iPhone",
+      "localizedDescription": "Madeira runs Windows PC games on compatible iPhones using FEX-Emu, Wine, and a Metal graphics translation layer. This is an unofficial listing that follows the developer's GitHub releases.",
+      "iconURL": "https://raw.githubusercontent.com/willfaust/Madeira/main/app/Madeira/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png",
+      "category": "games",
+      "tintColor": "#365E98",
+      "versions": [
+        {
+          "version": "0.1.3",
+          "buildVersion": "4",
+          "date": "2026-10-03",
+          "localizedDescription": "### New\n- **In-app JIT: no StikDebug needed.** Madeira can enable JIT by itself through a bundled helper built on StikJIT. On iOS 27 it pairs with the iPhone it runs on: in Settings › Privacy & Security › Developer Mode, tap **Pair with Madeira** and enter the PIN Madeira shows. No computer needed. On iOS 26, import a pairing file instead. The pairing is kept in the Keychain. StikDebug still works. (#127)\n- **Play turns JIT on for you.** If JIT is off, Play enables it and then starts the game. The button reads **Starting JIT** meanwhile.\n- **Madeira JIT shortcut (iOS 27, optional).** LocalDevVPN's loopback does not work over cellular data. The shortcut connects LocalDevVPN, turns Cellular Data off when there is no Wi-Fi, and puts both back once the game has started, along with any VPN you were using. Add it during setup or in Settings › JIT.\n- **Steam Cloud saves** for installed Steam games, on by default. Saves sync before and after you play, and the cloud copy is backed up before it is replaced. (#130)\n- **A controller as keyboard and mouse**, chosen per game, with a Controller binds page. DirectInput is now a per-game choice too. (#128)\n- **Setup** starts by installing LocalDevVPN when it is missing. It opens once more after this update, so you can pick one of the new JIT options.\n\n### Fixed\n- Games start faster: Wine starts as soon as the wineserver is ready, not after a fixed 2 s. (#125)\n- Cuphead (#107), Nine Sols (#108) and Hades II (#119, #120) now run, and Steam app info with escaped quotes is read correctly (#118).\n- JIT errors now explain the problem and offer a fix: **Pair Again** or **Connect LocalDevVPN**. The error also shows on the Settings tab.\n\n### Known issues\n- With Wi-Fi and Cellular Data both off, LocalDevVPN cannot connect, so JIT cannot be enabled, even with the shortcut. Connect LocalDevVPN while a network is available.\n\n### Install\n- Requires **iOS 26 or later**. In-app pairing and the Madeira JIT shortcut need iOS 27.\n- If your sideloader asks whether to keep app extensions, keep them: Madeira's in-app JIT runs in one.\n- The IPA is ad-hoc signed (no certificate) and carries the app's entitlements, including the increased memory limit. Sideload it with your own Apple ID (SideStore, AltStore, Sideloadly, Plume or similar), which signs it for your device.\n- First-run setup walks you through JIT. Settings shows JIT and Memory+ with green checks and says **Ready to play**.\n\n### Not included\nThe Microsoft Visual C++ runtime DLLs are not redistributed (see `legal/THIRD-PARTY-NOTICES.md`). Building from source: `tools/fetch-vcruntime.md`.\n\nThanks to Dan Perks ([@danperks](https://github.com/danperks)) for in-app JIT and pairing, Jesse ([@JesseLovelace](https://github.com/JesseLovelace)) for Steam Cloud saves, faster launches and the game fixes, and Nick ([@125hz](https://github.com/125hz)) for keyboard-and-mouse controllers.\n",
+          "downloadURL": "https://github.com/willfaust/Madeira/releases/download/v0.1.3/Madeira-0.1.3.ipa",
+          "size": 145554426,
+          "sha256": "71e900cbc140778bd6fa67c1062821981ed98e6bfb674d853cfeefd6d242e1c0",
+          "minOSVersion": "17.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.kernel.increased-memory-limit",
+          "get-task-allow"
+        ],
+        "privacy": {
+          "NSLocalNetworkUsageDescription": "Madeira uses the local network to pair with this device for JIT, without a computer."
+        }
+      }
+    },
+    {
+      "name": "BCD Games",
+      "bundleIdentifier": "com.thebcd69.bcd",
+      "developerName": "thebcd69",
+      "subtitle": "Play PC games on iOS — alpha builds",
+      "localizedDescription": "BCD is an experimental PC game compatibility app for iOS, in active alpha development. This is an unofficial listing that follows the developer's GitHub releases.",
+      "iconURL": "https://raw.githubusercontent.com/thebcd69/bcd-games/main/app/Madeira/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png",
+      "category": "games",
+      "tintColor": "#63369A",
+      "versions": [
+        {
+          "version": "0.1.592",
+          "buildVersion": "592",
+          "date": "2026-10-23",
+          "localizedDescription": "**BCD is in alpha:** an early stage of development, before beta. Many games run, many do not yet, and things can break between builds. When a game fails, please send a log.\n\n## 🎮 New: Steam DLC\n\n- **BCD now installs the DLC you own.** Before a game's first install, BCD asks Steam which DLC you own for it and lets you choose them, each with its size (**Choose your DLC**), or install the game alone. It asks every time you install.\n- **Manage DLC after the install:** the game's page lists your DLC. Switch each one on or off and **Apply** downloads or removes it, or use **Install all your DLC**. DLC you do not own is listed under *Not in your library*.\n\n## 🛒 New: Epic Games Store (early)\n\n- **Sign in with your Epic account** in **Settings › Accounts**; your Epic games appear in the library with their covers.\n- **If the first sign-in stops at a step on Epic's side:** Epic sometimes needs you to accept an updated privacy policy or terms, or to answer an account question, before it lets an app sign in. BCD then says *\"Epic wants you to finish a step on its website\"*. Open epicgames.com in Safari (or any browser), sign in there and complete the step, then come back to BCD and sign in again.\n- **Install and play:** BCD downloads and installs your Epic games and starts them signed in to your account (through a small helper, BCD Host), so a game that checks with Epic that you own it starts as it does on a PC. Starting such a game needs an internet connection.\n- **Before Install, BCD says when a game cannot run:** games with Easy Anti-Cheat, and games that start through another company's launcher (for example Ubisoft's). **Grand Theft Auto V:** its anti-cheat (BattlEye) guards only GTA Online, so BCD starts the game with its own `-nobattleye` option: Story Mode plays, GTA Online stays off.\n- **Not yet:** game updates and repair, Epic cloud saves, and the Epic sign-in page some games show inside the game the first time.\n\n## Other improvements\n\n> **Tried one of these games on an earlier build? Reset its settings first.** A game keeps the settings it had until you reset them, so without this it may start with the old ones that failed. On the game's page: **Options › Recommended settings › Reset to Recommended**, then check that **Options › Auto-tune › Auto-tune this game** is on, and start the game again.\n\nThese fix failures found in the logs you sent with Send Log since 0.1.580. Each fix targets the error a log showed; most could not be tested on a device yet, so a game may now get further and still stop at a later point. If it does, please send a new log: it names the next problem.\n\n- **\"Microsoft Visual C++ 2015-2022 Redistributable (arm64)\" at start** (Unreal Engine games: Dead as Disco, TUNG, Denshattack!, FINAL FANTASY RESONANCE demo): BCD now reports a current version of that runtime, so newer games accept it, and auto-tune tries again for games where the earlier fix did not help. Thanks to le0-VV (#13).\n- **Steam downloads:** each downloaded piece is checked against Steam's checksum, and where Steam offers no secure (HTTPS) download server in your region, BCD now uses Steam's other servers instead of failing (pieces from those are always checked). Thanks to vancez (#11).\n- **Resident Evil Requiem, Life is Strange Remastered, Life is Strange 2:** the game could not load its main program at start; their recommended settings now make room for it.\n- **Grand Theft Auto IV (Steam):** Rockstar's launcher stopped before the game; its recommended settings now give Social Club's browser the memory layout it asks for.\n- **SpiderHeck, ROUNDS, PlateUp!:** BCD ended these games while they were still running, mistaking a burst of the game's own handled errors for a crash loop; their recommended settings now let BCD tell the two apart.\n- **FINAL FANTASY TACTICS - The Ivalice Chronicles:** the game stopped at start asking for more address space than the device has; its recommended settings now report a smaller space to it.\n- **Horizon Zero Dawn and A",
+          "downloadURL": "https://github.com/thebcd69/bcd-games/releases/download/v0.1.592/BCD.ipa",
+          "size": 167537815,
+          "sha256": "4e179192cfcd7c9afdc751c852f749f80c08da4a2f2bf20327ced452074afba9",
+          "minOSVersion": "18.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.kernel.extended-virtual-addressing",
+          "com.apple.developer.kernel.increased-memory-limit",
+          "get-task-allow"
+        ],
+        "privacy": {
+          "NSLocalNetworkUsageDescription": "BCD uses the local network to pair with this device for JIT, without a computer."
+        }
+      }
+    }
+  ],
   "news": [],
   "identifier": "io.github.domainus.altstore-gaming-source",
-  "sourceURL": "https://raw.githubusercontent.com/domainus/altstore-gaming-source/main/source.json"
+  "sourceURL": "https://raw.githubusercontent.com/domainus/altstore-gaming-source/main/source.json",
+  "featuredApps": [
+    "com.willfaust.madeora",
+    "com.thebcd69.bcd"
+  ]
 }
