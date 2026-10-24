@@ -9,7 +9,8 @@ on:
       - .github/workflows/update.yml
       - tests/test_source.py
   schedule:
-    - cron: '17 * * * *'
+    # Poll four times an hour; GitHub scheduled jobs may still be delayed or skipped.
+    - cron: '7,22,37,52 * * * *'
 
 permissions:
   contents: write
