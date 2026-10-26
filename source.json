@@ -47,6 +47,16 @@
       "tintColor": "#63369A",
       "versions": [
         {
+          "version": "0.1.611",
+          "buildVersion": "611",
+          "date": "2026-10-26",
+          "localizedDescription": "**BCD is in alpha:** an early stage of development, before beta. Many games run, many do not yet, and things can break between builds. When a game fails, please send a log.\n\n## ✨ New\n\n- **Performance overlay, redone.** Choose Off, 1, 2, 3, 4 or Custom in the in-game menu (Display), on the game's page or in Settings › Graphics. Layout 1 is a single FPS figure; 4 is a full report with a frame-time graph, 1% lows, memory against the iOS limit, the JIT pool and thermal state. Custom lets you pick the readings, the place, the size and the opacity. It stays clear of the touch controls and sits in the black bars when the picture leaves room. Off by default.\n- **Screenshots.** In-game menu › Tools › Take a screenshot keeps the game's own picture in Files and Photos. Send Log can include a small copy (about 100 KB).\n- **When a session ends unexpectedly**, BCD asks once at the next start whether to send its log.\n- **Input:** a key bar (Alt+Tab, Alt+Enter, Win, Esc, Del, F1-F12, Ctrl/Alt/Shift latches); gyro aiming; turbo buttons and macros; players 1-4 with per-player rumble; a radial menu, an aim zone and multi-finger gestures; touch-control colours and PlayStation symbols; Apple Pencil as a precise mouse; a controller-type choice (Xbox, DualSense, generic); a Paste key for iPad clipboard text; the mouse wheel scrolls.\n- **In-game menu:** pause and resume, a list of open windows, a task page with memory and the JIT pool, a magnifier, sharp or smooth picture filtering, and log tools with ready-made debug settings.\n- **Game page:** Windows version, built-in or the game's own DLLs, quick launch options, CPU translation presets, simple fixes (INI and registry values), Wine desktop size, theme and wallpaper, a start delay, a second program and window rules, save backups (by hand or when the game closes; restore asks first), and Help with this game: a guided run that ends in Send Log, and feedback on how a game ran.\n- **MIDI music** now plays (older games were silent).\n- **Windows desktop › Start menu:**\n  - **BCD Tests:** system info, RAM 2-12 GB (it stops before iOS would close BCD), JIT pool, CPU, disk, network, DirectX 8/9/10/11/12, DirectDraw, frame time, display modes, sound, video, MIDI, controller and input tests, and \"Run all tests\".\n  - **BCD Tools:** Task Manager, Command Prompt, Notepad, Registry Editor, Wine configuration, Control Panel, Uninstall a program, Game Controllers.\n  - **BCD Runtimes:** XNA 4.0, PhysX, OpenAL and the DirectX June 2010 files, downloaded from their makers on request.\n  - **7-Zip** (without RAR support).\n- **Battle.net and the EA app** are back in the Launchers tab (experimental).\n\n## Other improvements\n\n> **Tried one of these games on an earlier build? Reset its settings first.** A game keeps the settings it had until you reset them, so without this it may start with the old ones that failed. On the game's page: **Options › Recommended settings › Reset to Recommended**, then check that **Options › Auto-tune › Auto-tune this game** is on, and start the game again.\n\nThese fix failures found in the logs you sent with Send Log since 0.1.600. Each fix targets the error a log showed; most could not be tested on a device yet, so a game may now get further and still stop at a later point. If it does, please send a new log: it names the next problem.\n\n- **64-bit Direct3D 9:** a game that uses nothing newer now draws through DXMT by default (it failed before for lack of OpenGL). PICO PARK, Don't Starve Together and A Hat in Time have recommended settings for it.\n- **Direct3D 8** games can draw through Direct3D 9. Grand Theft Auto III, Max Payne 2, POSTAL 2 and Hotline Miami get it in their recommended settings.\n- **GTA V Legacy from the Epic Games Store** (and Rockstar's store) has recommended settings of its own.\n- **The Adventures of Elliot:** recommended settings for its large program.\n- **EA app (experimental):** fixed child browser-window layering so the sign-in and library view stays above the outer window ",
+          "downloadURL": "https://github.com/thebcd69/bcd-games/releases/download/v0.1.611/BCD.ipa",
+          "size": 182284110,
+          "sha256": "55da80eabafc522a465808cbf8cdfb4f57d1455f243cfcd85b308c5315249ecc",
+          "minOSVersion": "18.0"
+        },
+        {
           "version": "0.1.600",
           "buildVersion": "600",
           "date": "2026-10-24",
@@ -74,7 +84,8 @@
           "get-task-allow"
         ],
         "privacy": {
-          "NSLocalNetworkUsageDescription": "BCD uses the local network to pair with this device for JIT, without a computer."
+          "NSLocalNetworkUsageDescription": "BCD uses the local network to pair with this device for JIT, without a computer.",
+          "NSPhotoLibraryAddUsageDescription": "BCD saves the screenshots you take in a game to your photo library. It never reads your photos."
         }
       }
     },
