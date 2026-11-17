@@ -1,0 +1,13 @@
+[
+  {
+    "repository": "camhoc/Madeira",
+    "name": "Madeira Nightly",
+    "bundleIdentifier": "com.willfaust.madeora",
+    "developerName": "camhoc",
+    "subtitle": "Nightly builds of Madeira for iPhone",
+    "localizedDescription": "Madeira Nightly runs Windows PC games on compatible iPhones using FEX-Emu, Wine, and Metal. This unofficial listing follows camhoc/Madeira releases. Requires JIT; follow the project instructions for device compatibility and setup.",
+    "iconURL": "https://raw.githubusercontent.com/camhoc/Madeira/main/app/Madeira/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png",
+    "category": "games",
+    "tintColor": "#365E98"
+  }
+]

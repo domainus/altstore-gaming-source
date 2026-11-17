@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - apps.json
+      - apps-nightly.json
       - scripts/update_source.py
       - .github/workflows/update.yml
       - tests/test_source.py
@@ -38,10 +39,10 @@ jobs:
         run: python3 -m unittest discover -s tests -v
       - name: Commit update if changed
         run: |
-          if ! git diff --quiet -- source.json; then
+          if ! git diff --quiet -- source.json source-nightly.json; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git add source.json
+            git add source.json source-nightly.json
             git commit -m 'Update AltStore app releases'
             git push
           else

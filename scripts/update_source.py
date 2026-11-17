@@ -281,26 +281,27 @@ def update_app(config: dict[str, str], old_app: dict[str, Any] | None) -> dict[s
     }
 
 
-def main() -> None:
-    config = json.loads(CONFIG_FILE.read_text(encoding="utf-8"))
-    source = json.loads(SOURCE_FILE.read_text(encoding="utf-8"))
+def main(config_file: Path = CONFIG_FILE, source_file: Path = SOURCE_FILE) -> None:
+    config = json.loads(config_file.read_text(encoding="utf-8"))
+    source = json.loads(source_file.read_text(encoding="utf-8"))
     previous = {app["bundleIdentifier"]: app for app in source["apps"]}
     apps = [update_app(item, previous.get(item["bundleIdentifier"])) for item in config]
     source["apps"] = apps
     source["featuredApps"] = [a["bundleIdentifier"] for a in apps]
     payload = json.dumps(source, indent=2, ensure_ascii=False) + "\n"
-    if payload == SOURCE_FILE.read_text(encoding="utf-8"):
+    if payload == source_file.read_text(encoding="utf-8"):
         print("Source is already up to date")
         return
-    temp = SOURCE_FILE.with_suffix(".json.tmp")
+    temp = source_file.with_suffix(".json.tmp")
     temp.write_text(payload, encoding="utf-8")
-    temp.replace(SOURCE_FILE)
+    temp.replace(source_file)
     print(f"Updated source with {len(apps)} apps")
 
 
 if __name__ == "__main__":
     try:
         main()
+        main(ROOT / "apps-nightly.json", ROOT / "source-nightly.json")
     except (SourceError, OSError, ValueError, KeyError, zipfile.BadZipFile) as err:
         print(f"ERROR: {err}", file=sys.stderr)
         sys.exit(1)

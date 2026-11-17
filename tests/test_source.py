@@ -66,6 +66,23 @@ class TestUpdater(unittest.TestCase):
                          {"com.willfaust.madeora", "com.thebcd69.bcd", "com.mak5er.aircard"})
         self.assertIn(len(source["apps"]), (0, 2, 3))
 
+    def test_nightly_source(self):
+        source = json.loads((s.ROOT / "source-nightly.json").read_text())
+        config = json.loads((s.ROOT / "apps-nightly.json").read_text())
+        self.assertEqual(config[0]["repository"], "camhoc/Madeira")
+        self.assertEqual(len(source["apps"]), 1)
+        app = source["apps"][0]
+        self.assertEqual(app["name"], "Madeira Nightly")
+        self.assertEqual(app["bundleIdentifier"], "com.willfaust.madeora")
+        self.assertTrue(app["versions"])
+        for version in app["versions"]:
+            self.assertTrue(version["downloadURL"].startswith(
+                "https://github.com/camhoc/Madeira/releases/download/"))
+        main = json.loads(s.SOURCE_FILE.read_text())
+        self.assertNotEqual(source["identifier"], main["identifier"])
+        self.assertNotEqual(source["sourceURL"], main["sourceURL"])
+        self.assertEqual(main["apps"][0]["name"], "Madeira")
+
 
 if __name__ == "__main__":
     unittest.main()

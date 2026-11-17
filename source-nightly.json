@@ -1,0 +1,49 @@
+{
+  "name": "domainus Madeira Nightly",
+  "subtitle": "Madeira Nightly releases from camhoc/Madeira",
+  "description": "Unofficial AltStore Classic source tracking releases from the original developers. App downloads are directly from upstream GitHub.",
+  "website": "https://github.com/domainus/altstore-gaming-source",
+  "tintColor": "#365E98",
+  "apps": [
+    {
+      "name": "Madeira Nightly",
+      "bundleIdentifier": "com.willfaust.madeora",
+      "developerName": "camhoc",
+      "subtitle": "Nightly builds of Madeira for iPhone",
+      "localizedDescription": "Madeira Nightly runs Windows PC games on compatible iPhones using FEX-Emu, Wine, and Metal. This unofficial listing follows camhoc/Madeira releases. Requires JIT; follow the project instructions for device compatibility and setup.",
+      "iconURL": "https://raw.githubusercontent.com/camhoc/Madeira/main/app/Madeira/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png",
+      "category": "games",
+      "tintColor": "#365E98",
+      "versions": [
+        {
+          "version": "0.2.0",
+          "buildVersion": "90",
+          "date": "2026-11-17",
+          "localizedDescription": "**Install with FlekStore:** https://flekstore.com/madeira\n\n**Battle.net setup guide:** see the attached \"Battle.net setup guide.md\"\n\n---\n\n**Madeira Nightly 0.2.29**\nBattle.net + everything since 0.2.26\n**New**\n• **Battle.net runs, and StarCraft: Remastered starts from it (setup in the PDF)**\n• **.NET 10** in Settings › Runtimes\n• **Self-restart loops** (Fallout: NV) are stopped\n• **Low-memory message** when iOS gives less memory\n**Games**\n• **Cyberpunk 2077** starts (D3D12 fix)\n• **AC Mirage** passes its Developer Mode check\n• **Detroit: Become Human** gets Vulkan\n• **Sonic Generations** finds your controller\n• **Rust** and **Assetto Corsa** skip their launchers\n• **Steep** (Epic) waits for Ubisoft Connect\n• **Project DIVA MM+** fits in memory\n• **Slay the Spire 2** gets more room to load\n• **Black Ops III** sees the real CPU cores\n• **Denshattack!** keeps its full memory pool\n• **Hades II**, **L.A. Noire**, **The Forest**, **Just Cause 2**: new recommended settings\n• **Witcher 3** AVX settings removed\n**Fixes**\n• **Battle.net** no longer fills the memory pool\n• **Move to drive** no longer fails on a good copy\n• **Get Help** reports explain the config they show\n**Battle.net notes**\n• **First start** can stop at the logo: start again\n• **Error 2123** + repair on start: let it finish\n• **Keep Madeira in front** while it's open\n• **Overwatch 2** doesn't start yet, please don't report it\n**Logging**\n• More detail for **Steam code 42**, **crashes**, **lost mouse input** and **drive libraries**\nSend a log with Get Help for anything that breaks 🙏\n\n\n---\n\n**Support me:** [Buy Me a Coffee](https://buymeacoffee.com/camhawk)\n",
+          "downloadURL": "https://github.com/camhoc/Madeira/releases/download/v0.2.29/Madeira.Nightly.0.2.29.ipa",
+          "size": 210767227,
+          "sha256": "5d255c390902d5f2fff8e819673485d433df74735b3cb8ab1feec7e4a9c8f366",
+          "minOSVersion": "18.0"
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.developer.kernel.extended-virtual-addressing",
+          "com.apple.developer.kernel.increased-memory-limit",
+          "com.apple.security.cs.allow-jit",
+          "get-task-allow"
+        ],
+        "privacy": {
+          "NSLocalNetworkUsageDescription": "Madeira uses the local network to pair with this device for JIT, without a computer, and to download Steam games from a PC on this network."
+        }
+      }
+    }
+  ],
+  "news": [],
+  "identifier": "io.github.domainus.altstore-gaming-source.nightly",
+  "sourceURL": "https://raw.githubusercontent.com/domainus/altstore-gaming-source/main/source-nightly.json",
+  "featuredApps": [
+    "com.willfaust.madeora"
+  ],
+  "iconURL": "https://raw.githubusercontent.com/camhoc/Madeira/main/app/Madeira/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png"
+}
