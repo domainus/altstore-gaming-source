@@ -16,6 +16,26 @@
       "tintColor": "#365E98",
       "versions": [
         {
+          "version": "0.2.101",
+          "buildVersion": "179",
+          "date": "2026-11-25",
+          "localizedDescription": "☕ **Support Madeira:** https://buymeacoffee.com/camhawk\n\n---\n\n**Madeira Nightly 0.2.101**\nEverything since 0.2.100. This is a test build and has not been tested on a device yet: please send a log with Get Help for anything that breaks.\n\n**Controls**\n• **Touch controls:** a stick zone can move the mouse, and can hold an extra action when pushed far\n• **Touch controls:** buttons can latch and press a second key\n• **Touch controls:** button opacity and colour\n• **Gyro aim:** more activation buttons and an on-screen Gyro button\n• **Touch mode:** a tap moves the pointer first, then clicks\n• **Controller:** claims controller input again if the first try at app start was too early\n\n**Game fixes**\n• **Left 4 Dead 2:** downloaded Workshop add-ons are copied where the game looks for them\n• **Madeira Dock:** games with no .exe launch option use the best non-beta Windows option\n• Fix for the Visual C++ installer failing in some Unreal games\n• **Baldur's Gate 3** launcher: room for the fourth Chromium memory pool\n\nThanks to BOR1NG (Avery Felts), MetalSharp-Wine (LGPL-2.1, FEX parts MIT) and Mesa/KosmicKrisp (MIT). Full source for this build is attached.\n\n---\n\n☕ **Support Madeira:** https://buymeacoffee.com/camhawk\n",
+          "downloadURL": "https://github.com/camhoc/Madeira/releases/download/0.2.101-og/Madeira.Nightly.0.2.101.og.ipa",
+          "size": 234182560,
+          "sha256": "d9336315390dd138866f2aec9e2696d52ab10827aa5c803301d0e20f34f1e420",
+          "minOSVersion": "18.0"
+        },
+        {
+          "version": "0.2.100",
+          "buildVersion": "178",
+          "date": "2026-11-25",
+          "localizedDescription": "☕ **Support Madeira:** https://buymeacoffee.com/camhawk\n\n---\n\n**Madeira Nightly 0.2.100**\nEverything since 0.2.95. This is a test build: please send a log with Get Help for anything that breaks.\n\n**New**\n• **New look:** more screens use Apple's standard style (start screen, store pages, the \"Did it work?\" card, Get Help, first-time setup)\n• **Controllers on iPad:** no more second (blue) highlight on menus\n• **DX12 games:** newer KosmicKrisp (Mesa 26.3.1), and compiled shaders are saved, so later launches start faster\n• **Steam:** the Launch arguments field now works when \"The game\" is picked\n• **Touch camera:** with Pointer mode set to Relative, finger camera follows your sensitivity setting\n• **Mouse lock (iPad):** keeps asking again if iPadOS says no at first\n• **Tap to click:** better timing for taps and tap-and-hold\n• **Game Dock:** finds PhysX and other installers in every Steam library, including external drives\n\n**Game fixes**\n• **Raft** reaches the main menu\n• **Left 4 Dead 2** start fix\n• **Baldur's Gate 3** launcher: memory and .NET fixes (still closes after about 11 s; more logs added)\n• **Batman: Arkham** games reach the title screen with PhysX\n• **Black Ops 3, Overwatch 2:** more logging to find their crashes\n\n**Known issues**\n• Baldur's Gate 3 and Black Ops 3 still close early\n• A few games need a short hold instead of a quick tap to click\n\nThanks to BOR1NG (Avery Felts), MetalSharp-Wine (LGPL-2.1, FEX parts MIT) and Mesa/KosmicKrisp (MIT). Full source for this build is attached.\n\n---\n\n☕ **Support Madeira:** https://buymeacoffee.com/camhawk\n",
+          "downloadURL": "https://github.com/camhoc/Madeira/releases/download/0.2.100-og/Madeira.Nightly.0.2.100.og.ipa",
+          "size": 234045664,
+          "sha256": "89612d534e3af7fcd755599fb2124091c0f52117fefff7ab5f39723331ea1e09",
+          "minOSVersion": "18.0"
+        },
+        {
           "version": "0.2.0",
           "buildVersion": "173",
           "date": "2026-11-23",
