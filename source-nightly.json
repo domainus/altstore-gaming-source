@@ -16,6 +16,16 @@
       "tintColor": "#365E98",
       "versions": [
         {
+          "version": "0.2.180",
+          "buildVersion": "180",
+          "date": "2026-11-27",
+          "localizedDescription": "☕ **Support Madeira:** https://buymeacoffee.com/camhawk\n\n---\n\n**Madeira Nightly 0.2.180**\nEverything since 0.2.101 (the version number now matches the build number). This is a test build and has not been tested on a device yet: please send a log with Get Help for anything that breaks.\n\n**App**\n• **Storage screen:** see what uses space, remove several games at once, and choose whether their files go too\n• **Store pages:** Install and Update work from the sheet, and it no longer reopens after you close it\n• **Remove from Library:** the confirmation now appears on the page you are on\n• **Steam:** pick the download server in Settings\n• **About:** shows the version and whether a newer build exists\n• Clearer default resolution label; overlays follow the screen's orientation\n\n**Controls**\n• Attempted fix for controllers that did nothing in Madeira but worked in other apps\n• Option to swap A/B and X/Y on any controller\n• The mouse stick can be turned off from the config\n\n**Game fixes (not yet tested on a device)**\n• **Baldur's Gate 3:** Madeira Dock starts the game without Larian's launcher\n• **Grounded:** recommended settings start the game program directly\n• **Stray and other Unreal games:** fix for the \"Microsoft Visual C++ Runtime\" box\n• **Resident Evil Requiem:** new memory settings (turn off with `pool-low = 0`)\n• **Subnautica 2:** settings against an early crash\n• **Fallout 4:** fix for a crash shortly after Play\n• **RimWorld:** attempt at the blank menu text\n• **Garry's Mod:** opt-in fix for its folder check (`env.MADEIRA_PLAIN_DIR_LINKS = 1`)\n• **Madeira Dock:** retries instead of failing with error 41; games whose program sits in a subfolder find their DLLs\n• **Elden Ring:** can start without Easy Anti-Cheat (offline only)\n• **GTA IV:** opt-in wait for its Rockstar launcher pipe\n• Extra logging for Halo: MCC, R.E.P.O. and some crashes\n\n**Optional font:** the app includes Liberation Sans (SIL Open Font License), renamed to \"Arial\", for games that show no text without it. It is off; turn it on with `env.MADEIRA_ARIAL_FONT = 1`.\n\nThanks to BOR1NG (Avery Felts), MetalSharp-Wine (LGPL-2.1, FEX parts MIT), Mesa/KosmicKrisp (MIT) and the Liberation Fonts project. Full source for this build is attached.\n\n---\n\n☕ **Support Madeira:** https://buymeacoffee.com/camhawk\n",
+          "downloadURL": "https://github.com/camhoc/Madeira/releases/download/0.2.180-og/Madeira.Nightly.180.og.ipa",
+          "size": 234996705,
+          "sha256": "6c8e8de9b33d90ae680b4c2225f0b88f32bf515a81f8e890c84b549cf238d8a0",
+          "minOSVersion": "18.0"
+        },
+        {
           "version": "0.2.101",
           "buildVersion": "179",
           "date": "2026-11-25",
